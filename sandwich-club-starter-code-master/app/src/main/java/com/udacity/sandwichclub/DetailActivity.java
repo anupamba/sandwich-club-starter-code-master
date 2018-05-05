@@ -68,7 +68,7 @@ public class DetailActivity extends AppCompatActivity {
         desc.setText(sandwich.getDescription() != null ? sandwich.getDescription() :"Not Available");
 
         // Ingredients
-        if(null != sandwich.getIngredients()
+        if( sandwich.getIngredients() != null
                 && sandwich.getIngredients().size() > 0 ) {
             TextView ingredientTV = findViewById(R.id.ingredients_tv);
             StringBuilder strBulIngredient = new StringBuilder();
@@ -78,7 +78,7 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         // Also know as
-        if(null != sandwich.getAlsoKnownAs()
+        if(sandwich.getAlsoKnownAs() != null
                 && sandwich.getAlsoKnownAs().size() > 0 ) {
             TextView alsoKnowTV = findViewById(R.id.also_known_tv);
             StringBuilder strBulAlsoKnow = new StringBuilder();
